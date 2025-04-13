@@ -12,15 +12,30 @@ public class Food {
 	/**
 	 * Creates a new Food at a random location
 	 */
+	//Every time when food is called, it generates at a random location.
 	public Food() {
-		//FIXME
+		x = Math.random();
+		y = Math.random();
 	}
 	
+	public static double getFoodSize() {
+		return FOOD_SIZE;
+	}
+
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
 	/**
 	 * Draws the Food
 	 */
 	public void draw() {
-		//FIXME
+		StdDraw.setPenColor(StdDraw.BLUE);
+		StdDraw.filledCircle(x, y, FOOD_SIZE);
 	}
 	
 }
